@@ -19,7 +19,8 @@ struct PostList:Codable {
 // Codable 可以编码也可以解码
 // 结构体少一个属性是可以的
 // 结构体数据类型与json类型不对应会报错 记住
-struct Post:Codable {
+// 实列变量
+struct Post:Codable,Identifiable {
     
     // Property 属性
     let id:Int
@@ -31,13 +32,32 @@ struct Post:Codable {
     let text:String
     //数组显示 String 类型
     let images:[String]
-    
     var commentCount:Int
-    
     var likeCount:Int
-    
     var isLiked:Bool
     
+}
+
+//扩展类型
+extension Post{
+    var avatarImage:Image{
+        return loadImage(name: avatar)
+    }
+    
+    //评论数文本显示 Cakculated 计算属性
+    var commentCountText:String{
+        if commentCount <= 0 {return "评论"}
+        if commentCount < 1000 {return "\(commentCount)"}
+        //保留1位小数
+        return String(format: "%.1fK", Double(commentCount) / 1000)
+    }
+    
+    //点赞文本显示
+    var likeCountText:String{
+        if likeCount <= 0 {return "点赞"}
+        if likeCount < 1000 {return "\(likeCount)"}
+        return String(format: "%.1fK", Double(likeCount) / 1000)
+    }
 }
 
 //全局变量
@@ -62,4 +82,9 @@ func loadPostListData(_ fileName:String)->PostList{
     // 解析完成的时候返回 list
     return list
     
+}
+
+//UIImage防止重复
+func loadImage(name:String) -> Image{
+    return Image(uiImage: UIImage(named: name)!)
 }
