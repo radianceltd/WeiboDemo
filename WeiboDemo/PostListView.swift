@@ -32,6 +32,7 @@ struct PostListView: View {
                         
                     }
                     .listRowInsets(EdgeInsets())
+                    
                 }
             }
             .navigationBarTitle("Title")
