@@ -103,6 +103,10 @@
 		BC64EC6C24D1511B00EB6871 /* PostCellToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64EC6B24D1511B00EB6871 /* PostCellToolbarButton.swift */; };
 		BC64EC6E24D15B9000EB6871 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64EC6D24D15B9000EB6871 /* PostListView.swift */; };
 		BC64EC7024D1704100EB6871 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64EC6F24D1704100EB6871 /* PostDetailView.swift */; };
+		BCE799C524D2540700081DB9 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799C424D2540700081DB9 /* HomeNavigationBar.swift */; };
+		BCE799C724D25C7E00081DB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799C624D25C7E00081DB9 /* HomeView.swift */; };
+		BCE799C924D2657E00081DB9 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799C824D2657E00081DB9 /* UserData.swift */; };
+		BCE799EB24D2933100081DB9 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799EA24D2933100081DB9 /* HScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +208,10 @@
 		BC64EC6B24D1511B00EB6871 /* PostCellToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellToolbarButton.swift; sourceTree = "<group>"; };
 		BC64EC6D24D15B9000EB6871 /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		BC64EC6F24D1704100EB6871 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		BCE799C424D2540700081DB9 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
+		BCE799C624D25C7E00081DB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BCE799C824D2657E00081DB9 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		BCE799EA24D2933100081DB9 /* HScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +259,10 @@
 				BC64EC6B24D1511B00EB6871 /* PostCellToolbarButton.swift */,
 				BC64EC6D24D15B9000EB6871 /* PostListView.swift */,
 				BC64EC6F24D1704100EB6871 /* PostDetailView.swift */,
+				BCE799C424D2540700081DB9 /* HomeNavigationBar.swift */,
+				BCE799C624D25C7E00081DB9 /* HomeView.swift */,
+				BCE799C824D2657E00081DB9 /* UserData.swift */,
+				BCE799EA24D2933100081DB9 /* HScrollViewController.swift */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -507,14 +519,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE799C924D2657E00081DB9 /* UserData.swift in Sources */,
 				BC64EBA924D1167F00EB6871 /* AppDelegate.swift in Sources */,
+				BCE799EB24D2933100081DB9 /* HScrollViewController.swift in Sources */,
 				BC64EC7024D1704100EB6871 /* PostDetailView.swift in Sources */,
 				BC64EBAB24D1167F00EB6871 /* SceneDelegate.swift in Sources */,
 				BC64EBAD24D1167F00EB6871 /* ContentView.swift in Sources */,
 				BC64EC6C24D1511B00EB6871 /* PostCellToolbarButton.swift in Sources */,
 				BC64EC6824D13F1900EB6871 /* Post.swift in Sources */,
 				BC64EBBD24D11B0400EB6871 /* PostCell.swift in Sources */,
+				BCE799C524D2540700081DB9 /* HomeNavigationBar.swift in Sources */,
 				BC64EC6624D12A6700EB6871 /* PostVIPBadge.swift in Sources */,
+				BCE799C724D25C7E00081DB9 /* HomeView.swift in Sources */,
 				BC64EC6E24D15B9000EB6871 /* PostListView.swift in Sources */,
 				BC64EC6A24D14C9000EB6871 /* PostImageCell.swift in Sources */,
 			);
