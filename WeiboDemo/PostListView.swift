@@ -13,20 +13,13 @@ struct PostListView: View {
 
     let category: PostListCategory
     
-    var postList:PostList{
-        switch category {
-        case .recommed:
-            return loadPostListData("PostListData_recommend_1.json")
-        case .hot:
-            return loadPostListData("PostListData_hot_1.json")
-        }
-    }
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         
         List{
             // foreach循环
-            ForEach(postList.list) { post in
+            ForEach(userData.postList(for: category).list) { post in
                 ZStack {
                     PostCell(post: post)
                     NavigationLink(destination: PostDetailView(post: post)) {

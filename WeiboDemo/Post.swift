@@ -60,8 +60,6 @@ extension Post{
     }
 }
 
-//全局变量
-let postList = loadPostListData("PostListData_recommend_1.json")
 
 //解析内部的数据文件
 func loadPostListData(_ fileName:String)->PostList{

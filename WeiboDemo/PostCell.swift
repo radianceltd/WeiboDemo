@@ -13,8 +13,17 @@ struct PostCell: View {
     //let image = UIImage(named: "4e7f0c83ly8g1ho507078j20ro0rojtq")!
     let post:Post
     
+    var bindingPost:Post{
+        userData.post(forId: post.id)!
+    }
+    
+    @EnvironmentObject var userData: UserData
+    
     var body: some View {
-       VStack(alignment: .leading, spacing: 10){
+        
+        var post = bindingPost
+        
+        return VStack(alignment: .leading, spacing: 10){
             //布局显示的内容
             HStack(spacing: 5){
                 post.avatarImage
@@ -38,7 +47,8 @@ struct PostCell: View {
                 Spacer()
                 if !post.isFollowed {
                     Button(action:{
-                        print("Click follow button")
+                        post.isFollowed = true
+                        self.userData.update(post)
                     }){
                         Text("关注")
                             .font(.system(size: 14))
@@ -71,14 +81,23 @@ struct PostCell: View {
                     image: "message",
                     text: post.commentCountText,
                     color: .black){
-                    print("Click comment button!")
+                    //点赞的处理
+                        //if post.isLiked
                 }
                 Spacer()
                 PostCellToolbarButton(
-                    image: "heart",
+                    //三目运算符
+                    image: post.isLiked ? "heart.fill" : "heart",
                     text: post.likeCountText,
-                    color: .black){
-                    print("Click like button!")
+                    color: post.isLiked ? .red : .black){
+                        if post.isLiked{
+                            post.isLiked = false
+                            post.likeCount -= 1
+                        }else{
+                            post.isLiked = true
+                            post.likeCount += 1
+                        }
+                        self.userData.update(post)
                 }
                 Spacer()
             }
@@ -95,6 +114,7 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: postList.list[0])
+        let userData = UserData()
+        return PostCell(post: userData.recommendPostList.list[0]).environmentObject(userData)
     }
 }
