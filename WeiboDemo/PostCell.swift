@@ -17,6 +17,8 @@ struct PostCell: View {
         userData.post(forId: post.id)!
     }
     
+    @State var presentComment:Bool = false
+    
     @EnvironmentObject var userData: UserData
     
     var body: some View {
@@ -81,9 +83,13 @@ struct PostCell: View {
                     image: "message",
                     text: post.commentCountText,
                     color: .black){
-                    //点赞的处理
-                        //if post.isLiked
+                        self.presentComment = true
                 }
+                .sheet(isPresented: $presentComment){
+                    CommentInputView(post: post).environmentObject(self.userData)
+                    
+                }
+                
                 Spacer()
                 PostCellToolbarButton(
                     //三目运算符

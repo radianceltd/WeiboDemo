@@ -107,6 +107,8 @@
 		BCE799C724D25C7E00081DB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799C624D25C7E00081DB9 /* HomeView.swift */; };
 		BCE799C924D2657E00081DB9 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799C824D2657E00081DB9 /* UserData.swift */; };
 		BCE799EB24D2933100081DB9 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE799EA24D2933100081DB9 /* HScrollViewController.swift */; };
+		BECD0E9A24D5C0290033B8D8 /* CommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD0E9924D5C0290033B8D8 /* CommentInputView.swift */; };
+		BECD0E9C24D5C4980033B8D8 /* CommentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD0E9B24D5C4980033B8D8 /* CommentTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -213,6 +215,8 @@
 		BCE799C624D25C7E00081DB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BCE799C824D2657E00081DB9 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		BCE799EA24D2933100081DB9 /* HScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		BECD0E9924D5C0290033B8D8 /* CommentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputView.swift; sourceTree = "<group>"; };
+		BECD0E9B24D5C4980033B8D8 /* CommentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,8 @@
 				BCE799C624D25C7E00081DB9 /* HomeView.swift */,
 				BCE799C824D2657E00081DB9 /* UserData.swift */,
 				BCE799EA24D2933100081DB9 /* HScrollViewController.swift */,
+				BECD0E9924D5C0290033B8D8 /* CommentInputView.swift */,
+				BECD0E9B24D5C4980033B8D8 /* CommentTextView.swift */,
 			);
 			path = WeiboDemo;
 			sourceTree = "<group>";
@@ -528,6 +534,8 @@
 				BC64EBAB24D1167F00EB6871 /* SceneDelegate.swift in Sources */,
 				BC64EBAD24D1167F00EB6871 /* ContentView.swift in Sources */,
 				BC64EC6C24D1511B00EB6871 /* PostCellToolbarButton.swift in Sources */,
+				BECD0E9A24D5C0290033B8D8 /* CommentInputView.swift in Sources */,
+				BECD0E9C24D5C4980033B8D8 /* CommentTextView.swift in Sources */,
 				BC64EC6824D13F1900EB6871 /* Post.swift in Sources */,
 				BC64EBBD24D11B0400EB6871 /* PostCell.swift in Sources */,
 				BCE799C524D2540700081DB9 /* HomeNavigationBar.swift in Sources */,
