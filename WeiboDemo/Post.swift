@@ -38,6 +38,7 @@ struct Post:Codable,Identifiable {
     
 }
 
+
 //扩展类型
 extension Post{
     var avatarImage:Image{
@@ -82,7 +83,15 @@ func loadPostListData(_ fileName:String)->PostList{
     
 }
 
+
 //UIImage防止重复
 func loadImage(name:String) -> Image{
     return Image(uiImage: UIImage(named: name)!)
+}
+
+
+struct Post_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

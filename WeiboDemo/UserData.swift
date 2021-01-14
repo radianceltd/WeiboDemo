@@ -15,7 +15,7 @@ class UserData: ObservableObject {
    @Published var hotpostList:PostList = loadPostListData("PostListData_hot_1.json")
     
     //定义字典
-    private var recommendPostDic: [Int:Int] = [:] // id: index
+    private var recommendPostDic: [Int:Int] = [:] // id: index //定义字典
     
     private var hotPostDic: [Int:Int] = [:] // id: index
     
@@ -29,15 +29,16 @@ class UserData: ObservableObject {
             let post = hotpostList.list[i]
             hotPostDic[post.id] = i
         }
-        
-        
     }
-    
 }
+
+
 
 enum PostListCategory {
     case recommed,hot
 }
+
+
 
 extension UserData{
     func postList(for category: PostListCategory) -> PostList {
@@ -46,6 +47,7 @@ extension UserData{
         case .hot: return hotpostList
         }
     }
+    
     
     func post(forId id:Int) -> Post? {
         if let index = recommendPostDic[id]{
@@ -58,6 +60,7 @@ extension UserData{
         
         return nil
     }
+    
     
     func update(_ post: Post){
         if let index = recommendPostDic[post.id]{

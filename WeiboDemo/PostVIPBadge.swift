@@ -11,10 +11,7 @@ import SwiftUI
 struct PostVIPBadge: View {
     
     let vip: Bool
-    
-   
-    
-    
+
     var body: some View {
         //分组
         Group{

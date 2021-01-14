@@ -32,6 +32,7 @@ struct PostCellToolbarButton: View {
     }
 }
 
+
 struct PostCellToolbarButton_Previews: PreviewProvider {
     static var previews: some View {
         PostCellToolbarButton(image: "heart", text: "点赞", color: .red){

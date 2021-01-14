@@ -25,9 +25,11 @@ struct PostDetailView: View {
     }
 }
 
+
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let userData = UserData()
         return PostDetailView(post: userData.recommendPostList.list[0]).environmentObject(userData)
     }
 }
+

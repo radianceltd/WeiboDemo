@@ -35,7 +35,6 @@ struct HomeNavigationBar: View {
             
             Spacer()
             
-            
             VStack(spacing: 3){
                 HStack(spacing: 0){
                     Text("推荐")

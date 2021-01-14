@@ -8,7 +8,9 @@
 
 import SwiftUI
 
+
 private let kImageSpace: CGFloat = 6
+
 
 struct PostImageCell: View {
     
@@ -48,6 +50,7 @@ struct PostImageCell: View {
         }
     }
 }
+
 
 struct PostImageCellRow:View {
     

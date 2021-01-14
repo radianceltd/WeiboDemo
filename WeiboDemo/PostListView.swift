@@ -26,7 +26,6 @@ struct PostListView: View {
                         EmptyView()
                     }
                     .hidden()
-                    
                 }
                 .listRowInsets(EdgeInsets())
             }
